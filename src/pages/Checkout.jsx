@@ -6,7 +6,7 @@ const Checkout = () => {
   const checkoutRef = useRef(null);
 
   return (
-    <section className="px-5 mb-5 min-h-[calc(100dvh-65px)] flex items-center justify-center">
+    <section className="min-h-[calc(100dvh-65px)] flex items-center justify-center">
       <div className="max-w-360 mx-auto grid grid-cols-1 lg:grid-cols-8 gap-5 flex-1 p-5">
         <div className="lg:col-span-6">
           <div className="bg-base-100 p-5 rounded-box">
