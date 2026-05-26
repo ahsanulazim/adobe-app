@@ -8,7 +8,7 @@ const Hero = () => {
       />
       <div className="max-w-360 mx-auto absolute top-0 bottom-0 left-0 right-0 w-full py-10 px-20 flex items-center justify-center">
         <div className="max-w-120 lg:max-w-190 mx-auto text-center">
-          <h1 className="font-bold text-base md:text-xl lg:text-4xl xl:text-5xl leading-6 lg:leading-10 xl:leading-13">
+          <h1 className="font-bold text-sm xs:text-base md:text-xl lg:text-4xl xl:text-5xl leading-4 xs:leading-6 lg:leading-10 xl:leading-13">
             Adobe Creative Cloud <br /> All Your Creative Tools in One Place.
             <br />
             Unleash Your Imagination with 20+ Industry-Leading Apps.
