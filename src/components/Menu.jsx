@@ -10,7 +10,7 @@ const Menu = () => {
         <Link href="#">Products</Link>
       </li>
       <li>
-        <Link href="#">Plans</Link>
+        <Link to="#plans">Plans</Link>
       </li>
     </>
   );

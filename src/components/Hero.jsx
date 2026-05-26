@@ -19,9 +19,11 @@ const Hero = () => {
             <br /> All the tools, all in one subscription. Get started today
             with flexible plans.
           </p>
-          <button className="btn btn-main rounded-full max-xs:btn-sm xl:btn-lg mt-2 xs:mt-5">
-            View Plans and Pricing
-          </button>
+          <a href="#plans">
+            <button className="btn btn-main rounded-full max-xs:btn-sm xl:btn-lg mt-2 xs:mt-5">
+              View Plans and Pricing
+            </button>
+          </a>
         </div>
       </div>
     </section>

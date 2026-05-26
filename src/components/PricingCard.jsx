@@ -1,4 +1,5 @@
 import { LuCheck } from "react-icons/lu";
+import { Link } from "react-router";
 
 const PricingCard = ({ plan }) => {
   return (
@@ -26,9 +27,11 @@ const PricingCard = ({ plan }) => {
         </ul>
         </div>
         <div className="mt-6">
+          <Link to="/checkout">
           <button className={`btn ${plan.popular? "btn-main" : "btn-outline border-blue-600 text-blue-600"} rounded-full btn-block`}>
             Buy Now
           </button>
+          </Link>
         </div>
       </div>
     </div>

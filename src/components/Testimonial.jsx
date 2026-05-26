@@ -2,7 +2,7 @@ import { FaQuoteLeft } from "react-icons/fa6";
 const Testimonial = () => {
   return (
     <section>
-      <div className="max-w-360 mx-auto p-5 grid grid-cols-1 md:grid-cols-2 gap-5 xl:gap-20 justify-between items-center">
+      <div className="max-w-360 mx-auto px-5 py-10 grid grid-cols-1 md:grid-cols-2 gap-5 xl:gap-20 justify-between items-center">
         <img
           src="/images/testimonial.png"
           alt="testimonial image"

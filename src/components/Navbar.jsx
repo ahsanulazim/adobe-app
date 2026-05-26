@@ -14,12 +14,12 @@ const Navbar = () => {
           >
             <LuMenu className="inline-block h-6 w-6 stroke-current" />
           </label>
-          <Link href="/" className="max-md:hidden">
+          <Link to="/" className="max-md:hidden">
             <img src="/adobe-logo.svg" alt="Adobe Logo" className="w-18" />
           </Link>
         </div>
         <div className="navbar-center flex">
-          <Link href="/" className="md:hidden">
+          <Link to="/" className="md:hidden">
             <img src="/adobe-logo.svg" alt="Adobe Logo" className="w-18" />
           </Link>
           <ul className="menu hidden md:flex menu-horizontal px-1">

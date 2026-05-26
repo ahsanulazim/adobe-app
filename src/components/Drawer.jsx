@@ -10,7 +10,7 @@ const Drawer = ({ children }) => {
         {/* Navbar */}
         <Navbar />
         {/* Page content here */}
-        <main>{children}</main>
+        <main className="bg-base-200">{children}</main>
         <Footer />
       </div>
       <div className="drawer-side">

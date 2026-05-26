@@ -3,7 +3,7 @@ import plans from "../../json/plans.json";
 
 const Plans = () => {
   return (
-    <section>
+    <section id="plans">
       <div className="max-w-360 mx-auto px-5 py-10">
         <div className="text-center mb-10">
           <h2 className="text-2xl lg:text-4xl font-bold">
