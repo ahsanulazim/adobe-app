@@ -1,0 +1,56 @@
+[
+  {
+    "id": "plan-individual",
+    "name": "Individuals",
+    "tagline": "Best for solo creators, freelancers, and professionals.",
+    "price": 17500,
+    "currency": "BDT",
+    "billingCycle": "Yearly",
+    "popular": false,
+    "buttonText": "Buy Subscription",
+    "features": [
+      "Access to 20+ desktop & mobile apps (Photoshop, Illustrator, etc.)",
+      "100 GB of secure cloud storage",
+      "Adobe Fonts (Full library with 20,000+ fonts)",
+      "Adobe Creative Cloud Libraries for asset management",
+      "Standard customer support via email and chat"
+    ]
+  },
+  {
+    "id": "plan-business",
+    "name": "Business & Agencies",
+    "tagline": "Perfect for small to medium creative agencies and teams.",
+    "price": 35000,
+    "currency": "BDT",
+    "billingCycle": "Yearly",
+    "popular": true,
+    "badgeText": "Most Popular",
+    "buttonText": "Upgrade Team",
+    "features": [
+      "Everything included in Individuals plan",
+      "1 TB of secure cloud storage per user",
+      "Admin Console for easy license management & reassignment",
+      "Centralized billing and asset ownership controls",
+      "Integration with Slack, Microsoft Teams, and Jira",
+      "24/7 Premium technical support with dedicated experts"
+    ]
+  },
+  {
+    "id": "plan-enterprise",
+    "name": "Enterprise Pro",
+    "tagline": "Tailored for large organizations requiring advanced security.",
+    "price": 55000,
+    "currency": "BDT",
+    "billingCycle": "Yearly",
+    "popular": false,
+    "buttonText": "Get Started",
+    "features": [
+      "Everything included in Business plan",
+      "Unlimited cloud storage with advanced asset pooling",
+      "Enterprise-grade security with Single Sign-On (SSO) & IdP integration",
+      "Corporate asset protection with strict sharing restrictions",
+      "Dedicated account manager & customized onboarding training",
+      "Unlimited 1-on-1 expert sessions for team members"
+    ]
+  }
+]

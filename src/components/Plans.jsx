@@ -1,4 +1,5 @@
 import PricingCard from "./PricingCard";
+import plans from "../../json/plans.json";
 
 const Plans = () => {
   return (
@@ -14,9 +15,9 @@ const Plans = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-          <PricingCard />
-          <PricingCard />
-          <PricingCard />
+          {plans.map((plan) => (
+            <PricingCard key={plan.id} plan={plan} />
+          ))}
         </div>
       </div>
     </section>
