@@ -1,8 +1,31 @@
 import { LuMenu } from "react-icons/lu";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import Menu from "./Menu";
+import { useContext, useState } from "react";
+import { MyContext } from "../context/MyProvider";
+import { toast } from "react-toastify";
+import { signOut } from "firebase/auth";
+import { auth } from "../../firebase/firebase.config";
 
 const Navbar = () => {
+  const { newUser } = useContext(MyContext);
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    setLoading(true);
+    signOut(auth)
+      .then(() => {
+        setLoading(false);
+        toast.success("Logged Out");
+        navigate("/login");
+      })
+      .catch((error) => {
+        toast.error(error);
+        setLoading(false);
+      });
+  };
+
   return (
     <header className="bg-base-100 shadow-sm">
       <div className="navbar max-w-360 mx-auto">
@@ -27,9 +50,18 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link to="/login">
-            <button className="btn rounded-full btn-outline">Log in</button>
-          </Link>
+          {newUser ? (
+            <button
+              onClick={handleLogout}
+              className="btn rounded-full btn-outline"
+            >
+              Logout
+            </button>
+          ) : (
+            <Link to="/login">
+              <button className="btn rounded-full btn-outline">Log in</button>
+            </Link>
+          )}
         </div>
       </div>
     </header>

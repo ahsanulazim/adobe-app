@@ -1,9 +1,22 @@
-import { useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import ShippingForm from "../components/ShippingForm";
 import Overview from "../components/Overview";
+import { MyContext } from "../context/MyProvider";
+import { useNavigate } from "react-router";
 
 const Checkout = () => {
   const checkoutRef = useRef(null);
+  const { newUser, loading } = useContext(MyContext);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!newUser && !loading) {
+      navigate("/login");
+    }
+  }, [newUser, navigate]);
+
+  if (loading) return <p>Loading...</p>;
 
   return (
     <section className="min-h-[calc(100dvh-65px)] flex items-center justify-center">

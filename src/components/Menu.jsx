@@ -4,13 +4,13 @@ const Menu = () => {
   return (
     <>
       <li>
-        <Link href="/">Home</Link>
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <Link href="#">Products</Link>
+        <Link to="#">Products</Link>
       </li>
       <li>
-        <Link to="#plans">Plans</Link>
+        <Link to="/#plans">Plans</Link>
       </li>
     </>
   );
