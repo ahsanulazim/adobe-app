@@ -8,6 +8,9 @@ import Signup from "./pages/Signup";
 import { ToastContainer } from "react-toastify";
 import ProtectedRoute from "./pages/ProtectedRoute";
 import Dashboard from "./pages/Dashboard";
+import Plans from "./components/Plans";
+import PaymentSuccessful from "./pages/PaymentSuccessful";
+import PaymentCancelled from "./pages/PaymentCancelled";
 
 function App() {
   return (
@@ -26,7 +29,12 @@ function App() {
                 <Dashboard />
               </ProtectedRoute>
             }
-          />
+          >
+            <Route index element={<Plans />} />
+            <Route path="/dashboard/plans" element={<Plans />} />
+          </Route>
+          <Route path="/payment-success" element={<PaymentSuccessful />} />
+          <Route path="/payment-cancelled" element={<PaymentCancelled />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

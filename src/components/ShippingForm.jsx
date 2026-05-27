@@ -1,3 +1,4 @@
+import { useImperativeHandle, useRef } from "react";
 import { useForm } from "react-hook-form";
 
 const ShippingForm = ({ ref }) => {
@@ -5,7 +6,6 @@ const ShippingForm = ({ ref }) => {
     handleSubmit,
     register,
     reset,
-    control,
     formState: { errors },
   } = useForm({
     defaultValues: {
@@ -13,19 +13,26 @@ const ShippingForm = ({ ref }) => {
       lastName: "",
       email: "",
       phone: "",
-      address: "",
-      thana: "",
-      district: "",
       comment: "",
     },
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+  const formRef = useRef(null);
+
+  // ref-এ getFormData expose করা হচ্ছে
+  // Overview থেকে Pay Now ক্লিকে এটা call হবে
+  useImperativeHandle(ref, () => ({
+    getFormData: () =>
+      new Promise((resolve, reject) => {
+        handleSubmit(
+          (data) => resolve(data),
+          (errors) => reject(errors)
+        )();
+      }),
+  }));
 
   return (
-    <form ref={ref} onSubmit={handleSubmit(onSubmit)} className="fieldset">
+    <form ref={formRef} className="fieldset">
       <div className="flex justify-baseline items-center gap-5">
         <div className="fieldset flex-1">
           <label htmlFor="firstName" className="label">

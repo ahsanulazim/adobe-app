@@ -7,6 +7,7 @@ export const MyContext = createContext();
 const MyProvider = ({ children }) => {
   const [newUser, setNewUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [selectedPlan, setSelectedPlan] = useState(null);
 
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
@@ -45,6 +46,8 @@ const MyProvider = ({ children }) => {
   const data = {
     newUser,
     loading,
+    selectedPlan,
+    setSelectedPlan,
   };
 
   return <MyContext value={data}>{children}</MyContext>;

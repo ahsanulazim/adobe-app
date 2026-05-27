@@ -23,7 +23,7 @@ const Checkout = () => {
       <div className="max-w-360 mx-auto grid grid-cols-1 lg:grid-cols-8 gap-5 flex-1 p-5">
         <div className="lg:col-span-6">
           <div className="bg-base-100 p-5 rounded-box">
-            <h2 className="text-xl font-bold">Shipping & Billing</h2>
+            <h2 className="text-xl font-bold">Billing Info</h2>
             <div className="divider"></div>
             <div>
               <ShippingForm ref={checkoutRef} />
@@ -31,7 +31,7 @@ const Checkout = () => {
           </div>
         </div>
         <div className="lg:col-span-2">
-          <Overview />
+          <Overview checkoutRef={checkoutRef} />
         </div>
       </div>
     </section>

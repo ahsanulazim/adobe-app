@@ -53,7 +53,7 @@ const Navbar = () => {
           {newUser ? (
             <button
               onClick={handleLogout}
-              className="btn rounded-full btn-outline"
+              className="btn btn-error rounded-full"
             >
               Logout
             </button>

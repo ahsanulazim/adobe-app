@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import { Link } from "react-router";
+import { MyContext } from "../context/MyProvider";
 
 const Menu = () => {
+  const { newUser } = useContext(MyContext);
+
   return (
     <>
       <li>
@@ -10,8 +14,13 @@ const Menu = () => {
         <Link to="#">Products</Link>
       </li>
       <li>
-        <Link to="/#plans">Plans</Link>
+        <a href="/#plans">Plans</a>
       </li>
+      {newUser && (
+        <li>
+          <Link to="/dashboard">Dashboard</Link>
+        </li>
+      )}
     </>
   );
 };
