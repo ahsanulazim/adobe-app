@@ -24,7 +24,11 @@ const Overview = ({ checkoutRef }) => {
       return res.json();
     },
     onSuccess: (data) => {
-      toast.success("Order placed successfully! 🎉");
+      if (data?.paymentUrl) {
+        window.location.href = data.paymentUrl;
+      } else {
+        toast.error("Payment URL not found");
+      }
     },
     onError: (error) => {
       toast.error(error.message || "Something went wrong. Please try again.");
